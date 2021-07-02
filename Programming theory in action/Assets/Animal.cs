@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // INHERITANCE
-public abstract class Animal : MonoBehaviour
+public abstract class Animal
 {
     // ENCAPSULATION
     protected int NumberOfLegs { private get; set; }
@@ -12,12 +12,12 @@ public abstract class Animal : MonoBehaviour
         get
         {
 
-            return name;
+            return Name;
         }
         set
         {
             if (value.Length < 5)
-                name = value;
+                Name = value;
         }
     }
     protected string sound;
@@ -25,12 +25,12 @@ public abstract class Animal : MonoBehaviour
     // POLYMORPHISM
     public void SetName(string name)
     {
-        this.name = name;
+        this.Name = name;
     }
     // POLYMORPHISM
     public void SetName(int number)
     {
-        name = "Object " + number;
+        Name = "Object " + number;
     }
 
     // ENCAPSULATION
@@ -42,8 +42,13 @@ public abstract class Animal : MonoBehaviour
     // ABSTRACTION
     public virtual void MakeSound()
     {
-        print(sound);
+        ShowText(sound);
     }
     public abstract string GetPetDetails();
+
+    public void ShowText(string text)
+    {
+        Debug.Log(text);
+    }
 
 }

@@ -4,7 +4,7 @@ public class Cat : Animal
 
     public Cat(string name)
     {
-        base.name = name;
+        base.Name = name;
         NumberOfLegs = 4;
         sound = "Meow";
     }
@@ -12,12 +12,13 @@ public class Cat : Animal
     // POLYMORPHISM
     public override string GetPetDetails()
     {
-        return ($"{name} is a Cat with {GetNumberOfLegs()} and it sound is: {sound} ");
+        return ($"{Name} is a Cat with {GetNumberOfLegs()} and it sound is: {sound} ");
     }
 
     // ABSTRACTION
     public void Purr()
     {
-        print("Purrrrrrrrrrrrrrrrrr");
+
+        ShowText("Purrrrrrrrrrrrrrrrrr");
     }
 }

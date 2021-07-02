@@ -4,7 +4,7 @@ public class Dog : Animal
 
     public Dog(string name)
     {
-        base.name = name;
+        base.Name = name;
         NumberOfLegs = 4;
         sound = "Woof";
     }
@@ -12,21 +12,21 @@ public class Dog : Animal
     // POLYMORPHISM
     public override string GetPetDetails()
     {
-        string s = $"{name} is a good boy with {GetNumberOfLegs()} legs.";
-        print(s);
+        string s = $"{Name} is a good boy with {GetNumberOfLegs()} legs.";
+        ShowText(s);
         return s;
     }
 
     // POLYMORPHISM
     public override void MakeSound()
     {
-        print($"{sound}!,{sound}!!");
+        ShowText($"{sound}!,{sound}!!");
     }
 
     // ABSTRACTION
     public void Growl()
     {
-        print("Grrrrrrrrrrrrrrrrrrr");
+        ShowText("Grrrrrrrrrrrrrrrrrrr");
     }
     
 }
