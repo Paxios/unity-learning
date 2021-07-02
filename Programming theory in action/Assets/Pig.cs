@@ -3,7 +3,7 @@ public class Pig : Animal
 {
     public Pig(string name)
     {
-        base.name = name;
+        base.Name = name;
         NumberOfLegs = 4;
         sound = "Oink";
     }
@@ -17,6 +17,6 @@ public class Pig : Animal
     // ABSTRACTION
     public void Squeal()
     {
-        print(GetPetDetails() + " " + GetPetDetails());
+        ShowText(GetPetDetails() + " " + GetPetDetails());
     }
 }
